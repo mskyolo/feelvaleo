@@ -1,7 +1,7 @@
 import openai
 
 # Set your OpenAI API key here
-openai.api_key = "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"
+openai.api_key = "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"
 
 def generate_insight(test_results):
     # Extract test results
@@ -12,7 +12,7 @@ def generate_insight(test_results):
     testosterone = test_results["Total Testosterone"]
 
     # Define prompt format for ChatGPT
-    prompt = f"Customer's health test results:\nHbA1c: {hba1c}\nHDL: {hdl}\nLDL: {ldl}\nFasting Glucose: {glucose}\nTotal Testosterone: {testosterone}\nPlease provide short and concise health advice based on these results as a specialist doctor who understands everything about the tests and suggests what medication or supplements to take alonside with it. Output format should be like - Based on the results, that customer is prone to diabetes :"
+    prompt = f"Customer's health test results:\nHbA1c: {hba1c}\nHDL: {hdl}\nLDL: {ldl}\nFasting Glucose: {glucose}\nTotal Testosterone: {testosterone}\nPlease provide short and concise health advice based on these results as a specialist doctor who understands everything about the tests and suggests what medication or supplements to take alonside with it. Output format should be like - Based on the results, that customer is prone to some disease or an early symptom for any specific disease(s) :"
 
     # Request completion from the API
     response = openai.Completion.create(
@@ -32,7 +32,7 @@ test_results = {
     "HDL": 70,
     "LDL": 120,
     "Fasting Glucose": 90,
-    "Total Testosterone": 300
+    "Total Testosterone": 1200
 }
 
 insight = generate_insight(test_results)
