@@ -41,3 +41,7 @@ cd feelvaleo
 pip3 install openai
 python3 insight_generator.py
 ```
+
+## Extensions
+
+This module can be easily extended to generate insight for individual and/or groups of test results and the suggestions could also be directed to supplements FeelValeo offers.
